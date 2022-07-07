@@ -1,0 +1,19 @@
+The Target variable -> Log Transformed.
+
+Total number of Categorical Variables are: 1 (date -> date dtype is changed to pd.to_datetime(data['date']))
+
+Total number of Numerical features are: 19
+Total number of Temporal features: 2 (yr_built and yr_renovated)
+Total number of Discrete features: 7
+Total number of missing values: 0
+
+date -> datetime object. Parse this and create 3 extra columns: year, month and day. Done by using fast-ml
+zipcode -> categorical variable
+
+
+Transformations:
+['sqft_living', 'sqft_above', 'long', 'sqft_living15', 'lat'] -> Yeo-Johnson Transformation
+
+['sqft_basement'] have lots of zeros(more than half), we can apply binary transformation to it.
+
+['sqft_lot', 'sqft_lot15'] -> log transformed
